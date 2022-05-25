@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر عربي | صفحة الشراء</title>
+    <script type="text/html" src="{require(index.js)}"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- الشريط العلوي -->
+        <div class="row">
+            <nav class="navbar custom-navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggler btn btn-icon collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbar-collapsed-menu" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a href="./checkout.html" class="navbar-toggler btn btn-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <div class="navbar-brand">
+                            <a href="." class="text-left">
+                                <img src="../src/img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <form class="form-inline">
+                        <input type="search" class="form-control custom-form-control" placeholder="أبحث...">
+                        <div class="dropdown categories">
+                            <a href="#" class="nave-link dropdown-toggle custom-btn " id="navbarDropsown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                اختر فئة
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <input type="checkbox" name="search-category" value="men">
+                                            رجالي
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <input type="checkbox" name="search-category" value="women">
+                                            نسائي
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label for="">
+                                            <input type="checkbox" name="search-category" value="kids">
+                                            أطفال
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn search-btn" type="submit">أبحث</button>
+                    </form>
+                    <div class="collapse navbar-collapse" id="navbar-collapsed-menu">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link ">
+                                    الصفحة الرئيسية
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-expanded="false">أقسام المتجر</a>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li>
+                                        <a href="#" class="dropdown-item">رجالي</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">نسائي</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">أطفال</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="search.html" class="nav-link">البحث المتقدم</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">تواصل معنا</a>
+                            </li>
+                            <li class="d-none d-lg-block">
+                                <a href="checkout.html " id=" btn-shoppingcart" class="btn custom-btn btn-icon"
+                                    data-toggle="tooltip" data-placement="bottom" title="عربة الشراء">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- نهاية الشريط العلوي -->
+
+
+        <div class="container">
+            <!--  عناصر التنقل الفرعيه-->
+            <div class="row">
+                <ol class="breadcrumb custom-breadcrumb">
+                    <li>
+                        <a href="index.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="active">
+                        عربة الشراء
+                    </li>
+                </ol>
+            </div>
+            <!-- نهاية عناصر التنقل الفرعيه -->
+
+            <div class="borders-between">
+                <!-- قسم عربة الشراء -->
+                <div class="row flex-column">
+                    <h1 class="custom-heading">عربة الشراء</h1>
+                    <form action="payment.html" method="get" id="form-checkout ">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>المنتج</th>
+                                    <th>السعر</th>
+                                    <th>العدد المطلوب</th>
+                                    <th class="hide-on-small">السعر الإجمالي</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-product-info data-product-price="400">
+                                    <td>
+                                        <div class="media custom-media">
+                                            <img src="img/lacoste_1.jpg" alt="" class="d-none d-md-block">
+                                            <div class="media-body">
+                                                <h4>تيشيرت رجالي من لاكوست</h4>
+                                                <div class="custom-text-muted">
+                                                    ملابس رجالي
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        400$
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="product1" value="تي شيرت رجالي من لاكوست">
+                                        <select name="quantity1" class="form-control custom-form-control  quantity"
+                                            data-product-quantity>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3" selected>3</option>
+                                        </select>
+                                    </td>
+                                    <td class="total-price-for-product hide-on-small" id="product1">
+                                        1200$
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger custom-btn custom-btn-danger "
+                                            data-remove-from-cart>
+                                            <span class="d-none d-md-block">حذف</span>
+                                            <i class="far fa-trash-alt d-block d-md-none"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr data-product-info data-product-price="300">
+                                    <td>
+                                        <div class="media custom-media">
+                                            <img src="img/tshirt.jpg" alt="" class="d-none d-md-block">
+                                            <div class="media-body">
+                                                <h4>تي شيرت أديداس</h4>
+                                                <div class="custom-text-muted">
+                                                    ملابس رجالي
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        300$
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="product2" value="تي شيرت أديداس">
+                                        <select name="quantity2" class="form-control custom-form-control quantity"
+                                            data-product-quantity>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                    <td class="total-price-for-product hide-on-small" id="product2">
+                                        300$
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger custom-btn custom-btn-danger "
+                                            data-remove-from-cart>
+                                            <span class="d-none d-md-block">حذف</span>
+                                            <i class="far fa-trash-alt d-block d-md-none"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <td colspan="5" class="total-price">
+                                    <span class="custom-text-muted" data-total-product>
+                                        السعر الإجمالي للمنتجات:
+                                        <span id="total-price-for-all-products">
+                                            1500$ دولار
+                                        </span>
+                                    </span>
+                                </td>
+                            </tfoot>
+                        </table>
+                        <button type="submit" class="btn custom-btn-primary2 custom-btn-with-icon">
+                             <span>
+                                    إكمال عمليه الشراء
+                                    <i class="fas fa-dollar-sign"></i>
+                                </span>
+                        </button>
+                    </form>
+                </div>
+                <!-- نهاية قسم عربة الشراء -->
+
+                <!-- الأقتراحات -->
+                <div class="suggestion row">
+                    <h3 class="custom-heading col-12">
+                        أقترحنا لك
+                    </h3>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card custom-thumbnail">
+                            <div class="sale">%50</div>
+                            <div class="overlay">
+                                <button class="btn btn-secondary custom-btn add-to-cart-btn">
+                                    إضافة للعربة
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <img src="./img/most_sold_2.jpg" alt="فلورا تي شيرت">
+                            <div class="card-body">
+                                <div class="clearfix">
+                                    <h4 class="float-right">فلورا تي شيرت</h4>
+                                    <div class="price float-left">
+                                        200$
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="clearfix">
+                                    <button
+                                        class="float-left btn btn-default custom-btn add-to-cart-btn d-block d-lg-none">
+                                        إضافة الى العربة
+                                        <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card custom-thumbnail">
+                            <div class="overlay">
+                                <button class="btn btn-secondary custom-btn add-to-cart-btn">
+                                    إضافة للعربة
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <img src="./img/most_sold_1.jpg" alt="شير بلوز من نافي">
+                            <div class="card-body">
+                                <div class="clearfix">
+                                    <h4 class="float-right">شير بلوز من نافي</h4>
+                                    <div class="price float-left">
+                                        500$
+                                    </div>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="clearfix">
+                                    <button
+                                        class="float-left btn btn-default custom-btn add-to-cart-btn d-block d-lg-none">
+                                        إضافة الى العربة
+                                        <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card custom-thumbnail">
+                            <div class="overlay">
+                                <button class="btn btn-secondary custom-btn add-to-cart-btn">
+                                    إضافة للعربة
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <img src="./img/most_sold_3.jpg" alt="جاكيت أولادي">
+                            <div class="card-body">
+                                <div class="clearfix">
+                                    <h4 class="float-right">جاكيت أولادي</h4>
+                                    <div class="price float-left">
+                                        450$
+                                    </div>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="clearfix">
+                                    <button
+                                        class="float-left btn btn-default custom-btn add-to-cart-btn d-block d-lg-none">
+                                        إضافة الى العربة
+                                        <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 d-none d-lg-block">
+                        <div class="card custom-thumbnail ">
+                            <div class="overlay">
+                                <button class="btn btn-secondary custom-btn add-to-cart-btn">
+                                    إضافة للعربة
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                            <img src="./img/hm_3.jpg" alt="طقم للصغار">
+                            <div class="card-body">
+                                <div class="clearfix">
+                                    <h4 class="float-right">طقم للصغار</h4>
+                                    <div class="price float-left">
+                                        25$
+                                    </div>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star active"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="clearfix">
+                                    <button
+                                        class="float-left btn btn-default custom-btn add-to-cart-btn d-block d-lg-none">
+                                        إضافة الى العربة
+                                        <i class="fas fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- نهاية الأقتراحات -->
+            </div>
+        </div>
+        <!-- نهاية قسم عربة الشراء -->
+    </div>
+    <!-- تذييل الصفحهة -->
+    <div id="footer" class="row">
+        <div class="col-12 text-center" id="brand-logos">
+            <span>المتجر وكيل معتمد لكبرى الشركات</span>
+            <div class="img-container">
+                <img src="./img/lacoste.png" alt="">
+                <img src="./img/adidas.png" alt="">
+                <img src="./img/puma.png" alt="">
+                <img src="./img/polo.png" alt="">
+            </div>
+        </div>
+        <div class="col-12 text-center" id="footer-nav">
+            <div class="footer-logo">
+                <a href="./">
+                    <img src="./img/logo_footer.png" alt="عربي">
+                </a>
+            </div>
+            <div class="col-12 d-none d-md-block" id="footer-nav-links">
+                <a href=".">الصفحة الرئيسية</a>
+                <a href="search.html">البحث المتقدم</a>
+                <a href="contact.html">تواصل معنا</a>
+            </div>
+
+            <div class="col-mg-6 offset-mg-3" id="newsletter">
+                <form>
+                    <label for="footer-email">
+                        تابع النشرة البريدية لأحدث العروض
+                    </label>
+                    <br>
+                    <div class="input-group">
+                        <input type="email" class="form-control custom-form-control" placeholder="البريد الإلكتروني"
+                            name="email" required>
+                        <button type="submit" class="btn custom-btn custom-btn-primary2">
+                            متابعة
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-12" id="footer-copyright-social">
+            <div class="container">
+                <div class="clearfix">
+                    <div id="copyright" class="float-right">
+                        جميع الحقوق محفوظة للمتجر سنه <span id="fullyear"></span>
+                    </div>
+                    <div class="float-left" id="social-icons">
+                        <a href="https://www.facebook.com">
+                            <i class="fab fa-facebook-square fa-lg"></i>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <i class="fab fa-twitter-square fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- نهاية تذييل الصفحة -->
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+/** @format */
+
+.custom-table {
+  width: 100%;
+  th,
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 1px solid #ebebeb;
+    font-size: 120%;
+
+    &:first-child {
+      width: 50%;
+    }
+    &:not(:first-child) {
+      text-align: center;
+    }
+  }
+  th {
+    color: #c2c2c2;
+    font-weight: normal;
+  }
+
+  .custom-media img {
+    width: 80px;
+    height: 80px;
+  }
+  .custom-media h4 {
+    font-size: 18px;
+    margin: 12px 0;
+  }
+  .quantity {
+    width: 56px;
+    height: 36px !important;
+    padding: 0px 8px;
+    margin-right: 20px;
+  }
+
+  th:first-child {
+    padding-right: 20px;
+  }
+  tfoot {
+    td {
+      border-bottom: none;
+      font-size: 150%;
+    }
+  }
+}
